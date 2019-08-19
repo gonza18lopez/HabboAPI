@@ -30,8 +30,8 @@ $api = new \Gonza18Lopez\HabboAPI\HabboAPI( 'es' );
 $habbo = $api->habbo( 'ImPower-' );
 ```
 
+### Documentación
+Visite [MundoFans](http://mundofans.es "MundoFans") para ver la documentación completa.
+
 ### Changelog
 - Se creó del proyecto HabboAPI.
-
-### Website
-Visite [MundoFans](http://mundofans.es "MundoFans") para más información.
