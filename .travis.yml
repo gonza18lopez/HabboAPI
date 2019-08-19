@@ -8,4 +8,8 @@ before_install:
  - composer self-update
 install:
  - composer update
+<<<<<<< HEAD
 sudo: false
+=======
+sudo: false
+>>>>>>> b0bfc42b7c795f13dd0e94eb869b413f69672655
