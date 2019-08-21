@@ -21,5 +21,12 @@
     },
     "require-dev": {
         "phpunit/phpunit": "8"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gonza18Lopez\\HabboAPI\\HabboServiceProvider"
+            ]
+        }
     }
 }

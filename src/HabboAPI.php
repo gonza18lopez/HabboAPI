@@ -11,6 +11,7 @@ namespace Gonza18Lopez\HabboAPI;
  */
 
 use Gonza18Lopez\HabboAPI\Core\Parser;
+use Gonza18Lopez\HabboAPI\Entities\Habbo;
 
 final class HabboAPI extends Parser
 {
@@ -42,10 +43,21 @@ final class HabboAPI extends Parser
 	 * Obtener información de un habbo
 	 *
 	 * @param string $habbo
-	 * @return Gonza18Lopez\HabboAPI\Entities\Habbo $habbo
+	 * @return Gonza18Lopez\HabboAPI\Entities\Habbo
 	 */
 	public function habbo( $habbo )
 	{
 		return $this->parser->getHabboFromUsername( $habbo );
+	}
+
+	/**
+	 * Obtener perfil completo de un habbo
+	 *
+	 * @param Entities\Habbo $habbo
+	 * @return Gonza18Lopez\HabboAPI\Entities\Profile
+	 */
+	public function profile( Habbo $habbo )
+	{
+		return $this->parser->getFullProfile( $habbo );
 	}
 }

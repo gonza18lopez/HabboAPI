@@ -35,7 +35,7 @@ final class Badge implements Entity
 	 */
 	public function index() : Int
 	{
-		return $this->badge->badgeIndex;
+		return isset( $this->badge->badgeIndex ) ? $this->badge->badgeIndex : 0;
 	}
 
 	/**

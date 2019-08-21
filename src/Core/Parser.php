@@ -14,6 +14,7 @@ namespace Gonza18Lopez\HabboAPI\Core;
 use GuzzleHttp\Client as HttpClient;
 
 use Gonza18Lopez\HabboAPI\Entities\Habbo;
+use Gonza18Lopez\HabboAPI\Entities\Profile;
 use Gonza18Lopez\HabboAPI\Exceptions\HabboNotFoundException;
 
 class Parser
@@ -72,6 +73,24 @@ class Parser
 		 * Retornamos la información en una entidad \Entities\Habbo
 		 */
 		return new Habbo( $data );
+	}
+
+	/**
+	 * Obtener perfil completo de un Habbo
+	 *
+	 * @param Entities\Habbo $habbo
+	 */
+	public function getFullProfile( Habbo $habbo )
+	{
+		/**
+		 * Obtenemos la información del Habbo en un objeto
+		 */
+		$data = $this->request( "users/{$habbo->id()}/profile" );
+
+		/**
+		 * Retornamos la información en una entidad \Entities\Profile
+		 */
+		return new Profile( $data );
 	}
 
 	/**

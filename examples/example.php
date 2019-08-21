@@ -14,3 +14,8 @@ $api = new \Gonza18Lopez\HabboAPI\HabboAPI( 'es' );
  * Obtener información del habbo "ImPower-"
  */
 $habbo = $api->habbo( 'ImPower-' );
+
+/**
+ * Obtener perfil completo de $habbo
+ */
+$profile = $api->profile( $habbo );
